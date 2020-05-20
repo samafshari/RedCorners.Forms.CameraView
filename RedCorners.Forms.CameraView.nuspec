@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>RedCorners.Forms.CameraView</id>
+    <version>8.47.0</version>
+    <title>RedCorners.Forms.CameraView</title>
+    <authors>NeatCapital OÜ</authors>
+    <owners>NeatCapital OÜ</owners>
+    <projectUrl>https://redcorners.com/forms</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A CameraView control for Xamarin.Forms (iOS and Android), based on ZXing.Net by Redth</description>
+    <releaseNotes>A CameraView control for Xamarin.Forms (iOS and Android), based on ZXing.Net by Redth</releaseNotes>
+    <copyright>Copyright 2020 NeatCapital OÜ</copyright>
+    <tags>Xamarin.Forms Camera Capture Image Barcode ZXing</tags>
+
+    <dependencies>
+	  <group targetFramework="MonoAndroid80">
+          <dependency id="Xamarin.Android.Support.v7.AppCompat" version="28.0.0.3" />
+		  <dependency id="RedCorners.Forms.ZXing" version="8.47.3" />
+		  <dependency id="Xamarin.Essentials" version="1.3.1" />
+		  <dependency id="Xamarin.Forms" version="4.4.0.991640" />
+      </group>
+	  
+	  <group targetFramework="Xamarin.iOS10">
+		  <dependency id="RedCorners.Forms.ZXing" version="8.47.3" />
+		  <dependency id="Xamarin.Essentials" version="1.3.1" />
+		  <dependency id="Xamarin.Forms" version="4.4.0.991640" />
+	  </group>
+    </dependencies>
+    
+    <license type="file">license.txt</license>
+    <icon>redcorners_forms_logo3.png</icon>
+  </metadata>
+
+  <files>
+    <file src="license.txt" target="" />
+    <file src="redcorners_forms_logo3.png" target="" />
+	
+	<file 
+      src="RedCorners.Forms.CameraView.Android\bin\Release\RedCorners.Forms.CameraView.dll" 
+      target="lib\MonoAndroid80\RedCorners.Forms.CameraView.dll" />
+	  
+    <file 
+      src="RedCorners.Forms.CameraView.iOS\bin\Release\RedCorners.Forms.CameraView.dll" 
+      target="lib\Xamarin.iOS10\RedCorners.Forms.CameraView.dll" />
+  </files>
+
+</package>

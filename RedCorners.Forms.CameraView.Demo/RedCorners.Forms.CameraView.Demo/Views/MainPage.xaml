@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rf:ContentPage2
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rf="clr-namespace:RedCorners.Forms;assembly=RedCorners.Forms"
+    xmlns:rfc="clr-namespace:RedCorners.Forms;assembly=RedCorners.Forms.CameraView"
+    xmlns:vm="clr-namespace:CameraViewDemo.ViewModels"
+    mc:Ignorable="d"
+    x:Class="CameraViewDemo.Views.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <rf:TitledContentView Title="RedCorners.Forms.CameraView" HasButton="False" x:Name="titleView">
+        <rf:TitledContentView.ToolBar>
+            <Button Visual="Default" BackgroundColor="Transparent" Text="Capture" Clicked="Button_Clicked" TextColor="White" />
+        </rf:TitledContentView.ToolBar>
+        <Grid>
+            <rfc:CameraView x:Name="cameraView" />
+            <Image x:Name="previewImage" Aspect="AspectFill" />
+        </Grid>
+    </rf:TitledContentView>
+</rf:ContentPage2>
